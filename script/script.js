@@ -149,3 +149,24 @@
   });
  
   renderAnnotations();
+
+  // Keyboard navigatie tussen annotatie-kaarten
+document.getElementById('anno-list').addEventListener('keydown', e => {
+  const cards = [...document.querySelectorAll('.anno-card')];
+  if (!cards.length) return;
+
+  const current = document.activeElement;
+  const idx = cards.indexOf(current);
+
+  if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+    e.preventDefault();
+    const next = cards[idx + 1] ?? cards[0];
+    next.focus();
+  }
+
+  if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+    e.preventDefault();
+    const prev = cards[idx - 1] ?? cards[cards.length - 1];
+    prev.focus();
+  }
+});

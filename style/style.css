@@ -12,28 +12,28 @@ html{
 	scroll-behavior: smooth;
 
     color-scheme: light dark;
-    --colour-background: light-dark(#f4eddb, #3f3535);
-    --colour-text: light-dark(#3f3535, #f4eddb);
+    --colour-background: light-dark(#121212, #FFD54F);
+    --colour-text: light-dark(#FFD54F, #121212);
 
     font-family: 'Times New Roman', Times, serif;
     color: var(--colour-text);
     background-color: var(--colour-background);
 
     --size-xxs: 0.5rem;
-	--size-xs: 0.75rem;
-	--size-sm: 0.875rem;
-	--size-base: 1rem;
-	--size-lg: 1.125rem;
-	--size-xl: 1.25rem;
-	--size-2xl: 1.5rem;
-	--size-3xl: 1.875rem;
-	--size-4xl: 2.25rem;
-	--size-5xl: 3rem;
-	--size-6xl: 3.75rem;
-	--size-7xl: 4.5rem;
-	--size-8xl: 6rem;
-	--size-9xl: 8rem;
-	--size-10xl: 10rem;
+    --size-xs: 0.75rem;
+    --size-sm: 0.875rem;
+    --size-base: 1rem;
+    --size-lg: 1.125rem;
+    --size-xl: 1.25rem;
+    --size-2xl: 1.5rem;
+    --size-3xl: 1.875rem;
+    --size-4xl: 2.25rem;
+    --size-5xl: 3rem;
+    --size-6xl: 3.75rem;
+    --size-7xl: 4.5rem;
+    --size-8xl: 6rem;
+    --size-9xl: 8rem;
+    --size-10xl: 10rem;
 }
 
 img,svg {
@@ -51,11 +51,31 @@ button{
 	color: inherit;
 }
 
+h1,h3,h4,h5,h6{
+  font-family: 'Arial', serif;
+  font-weight: 900;
+}
+
+h1{
+  font-size: var(--size-6xl);
+}
+
+h2{
+  font-family: 'Arial', serif;
+  font-weight: 500;
+}
+
+h3{
+  font-size: var(--size-4xl);
+  margin-bottom: var(--size-2xl);
+}
+
+
 .web-app{
-    margin: var(--size-2xl) var(--size-4xl);
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--size-2xl);
+  margin: var(--size-2xl) var(--size-4xl);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--size-2xl);
 }
 
 /* .para-block button[aria-expanded="true"]::before{
@@ -63,18 +83,33 @@ button{
 } */
 
 #reader{
-    display: flex;
-    flex-direction: column;
-    gap: var(--size-2xl);
-    padding: var(--size-2xl);
-    border-radius: var(--size-xxs);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-5xl);
+  padding: var(--size-2xl);
+  border-radius: var(--size-xxs);
+
+  & P{
+    font-size: var(--size-2xl);
+  }
+
+  height: 96vh;
+  overflow: scroll;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.para-block{
+  margin-bottom: var(--size-2xl);
 }
 
 #sidebar{
-    border: #7c7474 2px solid;
-    border-radius: var(--size-xxs);
+  border: #7c7474 2px solid;
+  border-radius: var(--size-xxs);
 }
-
 
 .add-anno-btn{
     display: flex;
@@ -84,7 +119,9 @@ button{
     align-items: center;
     justify-content: center;
     width: fit-content;
-    font-size: var(--size-xxs);
+    margin-top: var(--size-base);
+    margin-bottom: var(--size-base);
+    font-size: var(--size-xl);
     
     padding: var(--size-xxs) var(--size-xs);
     background-color: var(--colour-text);
@@ -145,8 +182,10 @@ button{
     .anno-card:focus {
       outline: 2px solid #378add;
       outline-offset: 2px;
+      border-color: #378add;
     }
  
+    
     .anno-card .badge {
       display: inline-flex;
       align-items: center;
