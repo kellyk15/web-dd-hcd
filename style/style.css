@@ -109,6 +109,7 @@ h3{
 #sidebar{
   border: #7c7474 2px solid;
   border-radius: var(--size-xxs);
+  background-color: var(--colour-text);
 }
 
 .add-anno-btn{
@@ -153,9 +154,10 @@ h3{
 #sidebar-header {
     padding: 1rem 1.25rem;
     border-bottom: 0.5px solid #7c7474;
-    font-size: var(--size-base);
-    font-weight: 500;
-    color: #7c7474;
+    font-size: var(--size-2xl);
+    font-weight: bold;
+    color: var(--colour-background);
+    font-family: 'Arial', serif;
 }
 
 /* claude */
@@ -169,12 +171,20 @@ h3{
     }
  
     .anno-card {
-      background: #fff;
+      background: var(--colour-background);
       border: 0.5px solid #d3d1c7;
       border-radius: 8px;
       padding: 0.75rem;
       cursor: pointer;
       transition: border-color 0.15s;
+      font-size: var(--size-2xl);
+
+      & div:nth-of-type(1) {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+        gap: var(--size-xxs);
+      }
     }
  
     .anno-card:hover { border-color: #378add; }
@@ -193,16 +203,17 @@ h3{
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background: #eaf3de;
-      color: #3b6d11;
-      font-size: 10px;
-      font-weight: 500;
+      /* background: #eaf3de; */
+      background: var(--colour-text);
+      color: var(--colour-background);
+      font-size: var(--size-base);
+      font-weight: bold;
       margin-right: 5px;
     }
  
     .anno-card .snippet {
-      font-size: 12px;
-      color: #5f5e5a;
+      font-size: var(--size-base);
+      color: rgb(255 213 79 / 0.8);
       font-style: italic;
       margin: 5px 0 6px;
       white-space: nowrap;
@@ -225,12 +236,16 @@ h3{
     }
  
     #pending-info {
-      font-size: 13px;
-      color: #1a1a18;
-      background: #faeeda;
+      font-size: var(--size-lg);
+      color: var(--colour-text);
+      /* background: rgb(250 238 218 / 0.8); */
+      background-color: rgb(18 18 18 / 0.8);
+      /* background-color: var(--colour-background); */
+      border: 2px solid var(--colour-background);
       border-radius: 8px;
-      padding: 6px 10px;
+      padding: var(--size-xs) var(--size-sm);
       display: none;
+      font-weight: 700;
     }
  
     #rec-btn {
