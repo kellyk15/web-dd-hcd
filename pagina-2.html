@@ -31,15 +31,17 @@
 
             <section id="shortcuts" aria-label="Beschikbare sneltoetsen" tabindex="0">
                 <p aria-hidden="true">
-                <kbd>?</kbd> lees sneltoetsen voor &nbsp;·&nbsp;
+                <kbd>alt + H</kbd> lees sneltoetsen voor &nbsp;·&nbsp;
                 <kbd>Tab</kbd> naar alinea &nbsp;·&nbsp;
-                <kbd>↑↓</kbd> tussen annotaties &nbsp;·&nbsp;
+                <kbd>alt + ↑↓</kbd> tussen annotaties &nbsp;·&nbsp;
                 <kbd>Enter</kbd> selecteer &nbsp;·&nbsp;
-                <kbd>R</kbd> start/stop opname
+                <kbd>Alt + R</kbd> start/stop opname
                 
             </p>
             <p class="sr-only">
-                Beschikbare sneltoetsen: ? om sneltoetsen te lezen, Tab om naar een alinea te gaan, pijl omhoog en omlaag om tussen annotaties te navigeren, Enter om te selecteren, en R om een opname te starten of stoppen.
+                Beschikbare sneltoetsen: Alt + H om sneltoetsen te lezen, 
+                Tab om naar een alinea te gaan, nogmaals Tab om de annotatie-knop te bereiken, 
+                Enter om een annotatie te maken, Alt + R om een opname te starten of stoppen.
             </p>
             </section>
         </div>
@@ -66,13 +68,13 @@
                 </div>
 
                 <div>
-                    <h1 aria-label="Titel: Philosophy 101">Philosophy 101</h1>
-                    <h2 aria-label="Auteur: Door Paul Kleinman">Door Paul Kleinman</h2>
+                    <h1 aria-label="Titel: Philosophy 101" tabindex="0">Philosophy 101</h1>
+                    <h2 aria-label="Auteur: Door Paul Kleinman" tabindex="0">Door Paul Kleinman</h2>
                 </div>
             </div>
 
             <div class="text-container">
-                    <h3>The origins of Western philosophy</h3>
+                    <h3 tabindex="0">The origins of Western philosophy</h3>
                     
                     <div class="para-block" data-para="1">
                         <p lang="en">
@@ -109,7 +111,7 @@
                 )
             </div>
 
-            <div id="anno-list" aria-live="polite" aria-label="List of annotations">
+            <div id="anno-list" aria-live="polite">
                 <p>
                     No annotations yet. Focus on a paragraph and click + annotation.
                 </p>
@@ -118,7 +120,7 @@
             <div id="rec-panel">
                 <div id="pending-info" aria-live="polite"></div>
 
-                <button id="rec-btn" aria-label="Start audio-opname" aria-pressed="false" disabled>
+                <button id="rec-btn" aria-label="Selecteer eerst een alinea" aria-pressed="false" disabled>
                     <span class="dot" aria-hidden="true"></span>
                     <span id="rec-label">Selecteer eerst een alinea</span>
                 </button>

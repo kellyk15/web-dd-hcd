@@ -172,7 +172,7 @@ nav ul li {
   }
 }
 
-header nav.open ul li {
+.header-content:focus-within nav ul li {
   transform: translateX(0);
   opacity: 1;
 }
@@ -292,7 +292,14 @@ kbd {
   pointer-events: auto;
 }
 
-.para-block:has(:focus-within) {
+/* .para-block:has(:focus-within) {
+  pointer-events: auto;
+  background-color: var(--colour-text);
+  color: var(--colour-background);
+  padding: var(--size-xl) var(--size-2xl);
+} */
+
+.para-block:focus{
   pointer-events: auto;
   background-color: var(--colour-text);
   color: var(--colour-background);
@@ -316,6 +323,12 @@ kbd {
   gap: 8px;
 }
 
+.anno-empty {
+  font-size: var(--size-xl);
+  color: rgb(255 213 79 / 0.8);
+  font-style: italic;
+}
+
 .anno-card {
   background: var(--colour-background);
   border: 0.5px solid #d3d1c7;
@@ -330,6 +343,25 @@ kbd {
     align-items: center;
     margin-bottom: 4px;
     gap: var(--size-xxs);
+  }
+  
+  &:focus{
+    background-color: var(--colour-text);
+    color: var(--colour-background);
+
+    & .badge {
+      background-color: var(--colour-background);
+      color: var(--colour-text);
+    }
+
+    & .snippet{
+      color: var(--colour-background);
+    }
+    
+    & .note-input {
+      background-color: var(--colour-background);
+      color: var(--colour-text);
+    }
   }
 }
 
